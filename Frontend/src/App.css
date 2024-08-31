@@ -1,0 +1,682 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #333;
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.7);
+  color: whitesmoke;
+}
+header p {
+  font-family: "Exo 2", sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  background: url(/img3.jpg) no-repeat center center/cover;
+  background-blend-mode: overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  padding: 150px 2rem;
+  text-align: center;
+}
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero .content .title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.hero .content .sub-title p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+.hero .content .sub-title p:last-child {
+  color: #00aaff;
+}
+.hero .content .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.hero .content .buttons button {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  color: #fff;
+  border: 2px solid #00aaff;
+  background: #00aaff;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+.hero .content .buttons button:hover {
+  background: #0095cc;
+  color: #fff;
+}
+
+@media (max-width: 1050px) {
+  header {
+    padding: 12px 16px;
+  }
+  .hero {
+    padding-left: 1.5rem;
+  }
+  .hero .content .title {
+    font-size: 3rem;
+  }
+  .hero .content .sub-title p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .hero .content .title {
+    font-size: 2.5rem;
+  }
+  .hero .content .sub-title p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 100px 1rem;
+    text-align: start;
+    padding-bottom: 10px;
+  }
+  .hero .content .title {
+    font-size: 2rem;
+  }
+  .hero .content .sub-title p {
+    font-size: 1rem;
+  }
+  .hero .content .buttons button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 467px) {
+  header {
+    padding: 8px 12px;
+  }
+  .hero .content .buttons {
+    flex-direction: column;
+  }
+}
+
+.workout_session {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 100px 2rem;
+  background: #f4f4f4;
+}
+.workout_session .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.workout_session .wrapper h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+}
+.workout_session .wrapper p {
+  font-size: 1.2rem;
+  color: #666;
+}
+.workout_session .wrapper .bootcamps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.workout_session .wrapper .bootcamps div {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, transform 0.3s;
+}
+.workout_session .wrapper .bootcamps div:hover {
+  background: #fafafa;
+  transform: translateY(-5px);
+}
+.workout_session .wrapper .bootcamps div:hover h4 {
+  color: #00aaff;
+}
+.workout_session .wrapper .bootcamps div:hover p {
+  color: #333;
+}
+
+@media (max-width: 1520px) {
+  .workout_session {
+    padding: 50px 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .workout_session .wrapper h1 {
+    font-size: 1.8rem;
+  }
+}
+
+.gallery {
+  background: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 100px 2rem;
+  color: #fff;
+}
+.gallery h1 {
+  font-size: 2.5rem;
+  color: #00aaff;
+  text-align: center;
+}
+.gallery .images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gallery .images div {
+  flex: 1;
+  min-width: calc(33.333% - 20px);
+}
+.gallery .images img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 1520px) {
+  .gallery {
+    padding: 50px 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .gallery h1 {
+    font-size: 1.8rem;
+  }
+  .gallery .images div {
+    min-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery .images div {
+    min-width: 100%;
+  }
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 100px 2rem;
+  background: #f9f9f9;
+}
+
+.pricing h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pricing .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing .wrapper .card {
+  flex: 1;
+  position: relative;
+  background: #fff;
+  border-radius: 12px; /* Slightly rounded corners for a modern look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing .wrapper .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.pricing .wrapper .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #0095ff; /* Adds a colored border for a touch of elegance */
+}
+
+.pricing .wrapper .card .title {
+  background: #0095ff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #007acc;
+}
+
+.pricing .wrapper .card .title h1 {
+  font-size: 2rem;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pricing .wrapper .card .title h3 {
+  font-size: 1.6rem;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.pricing .wrapper .card .description {
+  padding: 20px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pricing .wrapper .card .description p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  color: #555;
+}
+
+.pricing .wrapper .card .description p svg {
+  color: #0095ff;
+}
+
+.pricing .wrapper .card .description a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #0095ff;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px; /* Rounded corners for the button */
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pricing .wrapper .card .description a:hover {
+  background: #007acc;
+  transform: scale(1.05);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1520px) {
+  .pricing {
+    padding: 50px 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .pricing h1 {
+    font-size: 1.8rem;
+  }
+
+  .pricing .wrapper .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing .wrapper .card {
+    flex: 1 1 100%;
+  }
+
+  .pricing h1 {
+    font-size: 1.6rem;
+  }
+
+  .pricing .wrapper .card img {
+    height: 150px;
+  }
+
+  .pricing .wrapper .card .title h1 {
+    font-size: 1.8rem;
+  }
+
+  .pricing .wrapper .card .title h3 {
+    font-size: 1.5rem;
+  }
+}
+
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 40px 2rem;
+  text-align: center;
+}
+footer p {
+  font-size: 1.2rem;
+}
+footer a {
+  color: #00aaff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1520px) {
+  footer {
+    padding: 20px 1rem;
+  }
+}
+.workout_session {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+  background-color: #f4f4f4; /* Optional: Add a background color for better contrast */
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+ .image{
+  display: none;
+ }
+ .workout_session{
+  padding: 14px;
+ }
+}
+
+.image {
+  flex: 1;
+  padding-right: 30px; /* Space between image and text */
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+}
+
+.text {
+  flex: 2;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.bootcamps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bootcamp {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bootcamp h4 {
+  font-size: 1.4rem;
+  color: #0095ff;
+  margin-bottom: 10px;
+}
+
+.bootcamp p {
+  font-size: 1rem;
+  color: #444;
+}
+.bmi {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #ece9e6, #f3f3f3, #ffffff);
+  padding: 50px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bmi-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bmi-wrapper {
+  flex: 1;
+  min-width: 300px;
+}
+
+.bmi-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007bff;
+}
+
+.bmi-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bmi-button:hover {
+  background-color: #0056b3;
+}
+
+.bmi-image-wrapper {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.bmi-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Override the default Toastify container width */
+.Toastify__toast-container {
+  width: auto !important;
+  max-width: 600px !important; /* Adjust this value to your preference */
+}
+
+/* Ensure that the close button is always visible */
+.Toastify__toast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  word-wrap: break-word; /* Wrap text if it's too long */
+}
+.contact {
+  font-family: "Arial", sans-serif;
+  background: url('/path/to/contact.jpg') no-repeat center center/cover;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contact form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+  max-width: 1300px;
+  width: 100%;
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact div {
+  margin-bottom: 20px;
+}
+
+.contact label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.contact input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.contact button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact button:disabled {
+  background-color: #6c757d;
+}
+
+.contact button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
