@@ -8,7 +8,7 @@ const router = express.Router();
 config({ path: './config.env' });
 
 app.use(cors({
-    origin: "http://localhost:5173", 
+    origin: "https://gym-full-stack-mern-web-app.vercel.app/", 
     methods: ['POST'], 
     credentials: true, 
 }));
