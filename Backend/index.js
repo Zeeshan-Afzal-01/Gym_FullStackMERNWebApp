@@ -8,7 +8,7 @@ const router = express.Router();
 config({ path: './config.env' });
 
 app.use(cors({
-    origin: "https://gym-full-stack-mern-web-app.vercel.app/", 
+    origin: "https://gym-full-stack-mern-web-app-5uoh.vercel.app", 
     methods: ['POST'], 
     credentials: true, 
 }));
