@@ -21,7 +21,7 @@ const Contact = () => {
     console.log("Message Sending...")
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/send/mail",
+        `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/send/mail`,
         {
           name,
           email,
