@@ -14,8 +14,8 @@ const Hero = () => {
           <p>Unleash Your Potential</p>
         </div>
         <div className="buttons">
-          <button>Start Your Journey</button>
-          <button>Discover Your Plan</button>
+          <button style={{cursor:"pointer"}}>Start Your Journey</button>
+          <button style={{cursor:"pointer"}}>Discover Your Plan</button>
         </div>
       </div>
     </section>

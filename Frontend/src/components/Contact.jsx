@@ -11,10 +11,17 @@ const Contact = () => {
 
   const sendMail = async (e) => {
     e.preventDefault();
+
+    if (!name || !email || !message) {
+      toast.error("All fields are required.");
+      return;
+    }
+
     setLoading(true);
+    console.log("Message Sending...")
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/send/mail",
+        "http://localhost:3000/send/mail",
         {
           name,
           email,
@@ -22,17 +29,21 @@ const Contact = () => {
         },
         {
           withCredentials: true,
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "application/json" 
+          },
         }
       );
+      console.log("Email send")
       setName("");
       setEmail("");
       setMessage("");
       toast.success(data.message);
-      setLoading(false);
     } catch (error) {
+      const errorMessage = error.response?.data?.message || "An error occurred.";
+      console.log("message not send")
+      toast.error(errorMessage);
+    } finally {
       setLoading(false);
-      toast.error(error.response.data.message);
     }
   };
 
@@ -41,27 +52,36 @@ const Contact = () => {
       <form onSubmit={sendMail}>
         <h1>CONTACT US</h1>
         <div>
-          <label>Name</label>
+          <label htmlFor="name">Name</label>
           <input
             type="text"
+            id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            aria-label="Your Name"
+            
           />
         </div>
         <div>
-          <label>Email</label>
+          <label htmlFor="email">Email</label>
           <input
             type="email"
+            id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            aria-label="Your Email"
+            
           />
         </div>
         <div>
-          <label>Message</label>
+          <label htmlFor="message">Message</label>
           <input
             type="text"
+            id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            aria-label="Your Message"
+            
           />
         </div>
         <button
